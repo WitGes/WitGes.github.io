@@ -3,12 +3,63 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Ćwiczenie</title>
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+		<script>
+			var tab=[21, 7, 12, 143, -2, 44, 54, 12, 56, 12];
+		</script>
 	</head>
 	<body>
-		<h1>Witaj świecie</h1>
-		<div class="resolve"></div>
+		<p> </p>
+		<div class="container">
+			<div class="jumbotron">
+				<h1>Szukanie największej i najmniejszej liczby z podanych</h1>
+				<p>metodą dziel i zwyciężaj (divide and conquer)</p>
+			</div>
+			<div class="panel panel-info" style="text-align:center">
+				<nav>
+					<ul class="pagination pagination-lg">
+						<li class="enabled">
+							<a href="#" aria-label="Previous">
+								<span aria-hidden="true">&laquo;</span>
+							</a>
+						</li>
+						<li class="active">
+							<a href="#">1 <span class="sr-only">(current)</span></a>
+						</li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li class="enabled">
+							<a href="#" aria-label="Next">
+								<span aria-hidden="true">&raquo;</span>
+							</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="row form-inline">
+					<div class="form-group">
+						<label for="newElementTab">Dodaj kolejny element: </label>
+						<input type="number" class="form-control" id="newElementTab" placeholder="100">
+					</div>
+					<button class="btn btn-info">Dodaj</button>
+				</div>
+				<p> </p>
+			</div>
+			<div class="row">
+				<div class="col-md-3"></div>
+				<div class="col-md-2 resolveMax panel panel-info" style="text-align:center"></div>
+				<div class="col-md-2 tabLength panel panel-info" style="text-align:center"></div>
+				<div class="col-md-2 resolveMin panel panel-info" style="text-align:center"></div>
+				<div class="col-md-3"></div>
+			</div>
+		</div>
 		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<!--script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script-->
 		<script src="js/main.js"></script>
+		<script src="js/view.js"></script>
+		<script src="js/algorithm.js"></script>
+		<!--script src="js/addNewTab.js"></script-->
 	</body>
 </html>
 	
