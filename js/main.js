@@ -6,6 +6,7 @@ $('button').on('click', function(){
 	if (parseInt($('#newElementTab').val())) {
 		tab.push(parseInt($('#newElementTab').val()));
 		start();
+		empty();
 	}
 	else{
 		$('#newElementTab').attr('placeholder','Musisz podać liczbę');
@@ -17,6 +18,7 @@ $('#newElementTab').keydown(function (event){
 		if (parseInt($('#newElementTab').val())) {
 			tab.push(parseInt($('#newElementTab').val()));
 			start();
+			empty();
 		}
 		else{
 			$('#newElementTab').attr('placeholder','Musisz podać liczbę');

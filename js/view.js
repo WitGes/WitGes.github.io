@@ -1,3 +1,7 @@
+function empty(){
+	$('#newElementTab').val('');
+}
+
 function start(){
 	
 	var countTab= tab.length<10 ? tab.length : 10;
