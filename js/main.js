@@ -11,6 +11,18 @@ $('button').on('click', function(){
 		$('#newElementTab').attr('placeholder','Musisz podać liczbę');
 	};
 });
+$('#newElementTab').keydown(function (event){
+	
+	if ( event.which == 13 ) {
+		if (parseInt($('#newElementTab').val())) {
+			tab.push(parseInt($('#newElementTab').val()));
+			start();
+		}
+		else{
+			$('#newElementTab').attr('placeholder','Musisz podać liczbę');
+		}
+	}
+});
 
 $('ul').on('dblclick','.button',function(event){
 		if (tab.length>2) tab.splice($(this).attr('value'),1);
