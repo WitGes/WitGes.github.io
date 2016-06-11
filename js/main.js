@@ -13,7 +13,7 @@ $('button').on('click', function(){
 });
 
 $('ul').on('dblclick','.button',function(event){
-		tab.splice($(this).attr('value'),1);
+		if (tab.length>2) tab.splice($(this).attr('value'),1);
 		start();
 });
 
