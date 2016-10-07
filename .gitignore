@@ -50,3 +50,4 @@ Temporary Items
 .bower_components/jquery/**
 .bower_components/jquery/src
 .bower_components/jquery/external
+!.bower_components/bootstrap/dist/css/bootstrap.min.css

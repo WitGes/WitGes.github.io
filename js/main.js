@@ -1,8 +1,14 @@
 $(document).ready(function(){
 	start();
+	document.ondblclick = function () {
+    if (window.getSelection)
+        window.getSelection().removeAllRanges();
+    else if (document.selection)
+        document.selection.empty();
+	}
 });
 
-$('button').on('click', function(){
+function plusNumber () {
 	if (parseInt($('#newElementTab').val())) {
 		tab.push(parseInt($('#newElementTab').val()));
 		start();
@@ -11,24 +17,20 @@ $('button').on('click', function(){
 	else{
 		$('#newElementTab').attr('placeholder','Musisz podać liczbę');
 	};
+};
+
+$('button').on('click', function(){
+	plusNumber()
 });
+
 $('#newElementTab').keydown(function (event){
-	
-	if ( event.which == 13 ) {
-		if (parseInt($('#newElementTab').val())) {
-			tab.push(parseInt($('#newElementTab').val()));
-			start();
-			empty();
-		}
-		else{
-			$('#newElementTab').attr('placeholder','Musisz podać liczbę');
-		}
-	}
+	if (event.which == 13)
+		plusNumber();
 });
 
 $('ul').on('dblclick','.button',function(event){
-		if (tab.length>2) tab.splice($(this).attr('value'),1);
-		start();
+	if (tab.length>2) tab.splice($(this).attr('value'),1);
+	start();
 });
 
 $('ul').on('click','.buttonNext',function(){
